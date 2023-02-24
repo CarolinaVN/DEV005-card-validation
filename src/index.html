@@ -1,14 +1,38 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Tarjeta de crédito válida</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header></header>
-    <main></main>
-    <footer></footer>
-    <script src="index.js" type="module"></script>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <title>Tarjeta de crédito válida</title>
+  <link rel="stylesheet" href="style.css" />
+
+</head>
+
+<body>
+  <main class="boxOne"> Verifica tu tarjeta de crédito</main>
+
+  <main class="boxTwo">
+
+    <label for="card-number">Ingresa el número de tu tarjeta aquí: </label>
+    <input id="card-number" type="text" name="card-number" pattern="[0-9]+" placeholder=" 00000000000000"
+      minlength="14" maxlength="19">
+    <button id="btn"> Verificar </button>
+
+    <span class="validity"></span>
+    <div id="result"></div>
+    <div id="valid-card"> </div>
+    <div id="invalid-card"></div>
+    <div id="card-type"></div>
+
+  </main>
+
+
+  <header></header>
+
+  <footer> Propiedad de Carolina Vera Nahuelcoy </footer>
+
+  <script src="index.js" type="module">  </script>
+</body>
+
+
 </html>
