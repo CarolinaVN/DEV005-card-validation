@@ -1,17 +1,11 @@
 import validator from './validator.js';
 
-
-
-//alert('Bienvenida al valrificador de tarjetas de crédito, utilizaremos el algoritmo de Lunh para realizar la validación');
-
-//const card = document.getElementById ('card');
 const cardNumber = document.getElementById('card-number');
 const btn = document.getElementById('btn');
 const result = document.getElementById('result');
-//const validCard = document.getElementById('valid-card');
-//const invalidCard = document.getElementById('invalid-card');
-
-
+//const cardType = document.getElementById('card-type');
+//const boxtwo = document.getElementById('two');
+const boxthree = document.getElementById('three');
 
 //Funciones que interactuan con el DOM
 function Valid() {
@@ -21,23 +15,51 @@ function Valid() {
   //console.log(cardCharacter);
   // convierte los string a enteros 
   for (let i = 0; i < cardCharacter.length; i++) {
+    // paseInt devuelve numeros enteros 
     const numero = parseInt(cardCharacter[i])
-    // el imput solo se recibe numeros
+    // el imput solo se recibe numeros y envia mensaje de error 
+
     if (isNaN(numero)) {
-      result.innerHTML = 'Error al digitar el número de tarjeta';
+      result.innerHTML = 'Error al digitar el número de tarjeta'
     } else {
       enteros.push(numero)
     }
-
   }
-  console.log(validator.isValid(enteros));
+
+  
+  const resultadoFinal = validator.isValid(enteros);
+  const maskifyFinal = validator.maskify(cardNumber.value);
+  const card = document.getElementById('card');
+  
+  if (resultadoFinal  === true) {
+    // console.log(('debería caer con true'));
+    card.innerHTML = ('Su tarjeta de crédito número ' + (maskifyFinal) + ' es valida')
+  } else {
+    card.innerHTML = ('Su tarjeta de credito número ' + (maskifyFinal) + ' es invalida')
+  }
+
+  /*if (enteros[0] === 4) {
+    cardType.innerHTML = 'Visa';
+  } else if (enteros[0] === 5) {
+    cardType.innerHTML = 'MasterCard';
+  } else {
+    cardType.innerHTML = 'Desconocida';
+  }*/
+
+  ////console.log(validator.maskify(cardNumber.value));
+
+  // despliegue de boxthree
+  boxthree.style.display = 'block'
 }
 
-//console.log(validator.isValid(123))
-
-
 //eventos del DOM
-btn.addEventListener('click', Valid);
+btn.addEventListener('click', Valid)
+
+
+
+
+
+
 
 
 

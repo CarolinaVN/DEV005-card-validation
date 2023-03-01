@@ -12,15 +12,15 @@ describe('validator', () => {
     });
 
     it('debería retornar true para "4083952015263"', () => {
-      expect(validator.isValid('4083952015263')).toBe(true);
+      expect(validator.isValid([4,0,8,3,9,5,2,0,1,5,2,6,3])).toBe(true);
     });
 
     it('debería retornar true para "79927398713"', () => {
-      expect(validator.isValid('79927398713')).toBe(true);
+      expect(validator.isValid([7,9,9,2,7,3,9,8,7,1,3])).toBe(true);
     });
 
     it('debería retornar false para "1234567890"', () => {
-      expect(validator.isValid('1234567890')).toBe(false);
+      expect(validator.isValid([1,2,3,4,5,6,7,8,9,0])).toBe(false);
     });
   });
 
