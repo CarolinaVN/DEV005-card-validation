@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Tarjeta de crédito válida</title>
+  <link rel="stylesheet" href="style.css" />
+
+</head>
+
+<body>
+  <main class="boxOne"> Verifica tu tarjeta de crédito</main>
+
+  <main class="boxTwo" id="two">
+    <label for="card-number">Ingresa el número de tu tarjeta aquí: </label>
+    <input id="card-number" type="text" required pattern="[0-9]+" placeholder="################">
+    <button id="btn"> Verificar </button>
+    <span class="validity"></span>
+    <div id="result"></div>
+  </main>
+
+  <div class="boxThree" id="three" hidden>
+    <div id= "card"></div>
+    <div id="card-type"></div>
+
+  </div>
+
+  <footer>Carolina Vera Nahuelcoy</footer>
+
+  <script src="index.js" type="module">  </script>
+</body>
+
+
+</html>
