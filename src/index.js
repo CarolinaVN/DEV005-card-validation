@@ -46,7 +46,7 @@ function Valid() {
     cardType.innerHTML = 'Desconocida';
   }*/
 
-  ////console.log(validator.maskify(cardNumber.value));
+  //console.log(validator.maskify(cardNumber.value));
 
   // despliegue de boxthree
   boxthree.style.display = 'block'
