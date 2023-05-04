@@ -7,10 +7,10 @@ const validator = {
     // multiplicar los digitos en posicion par por 2
     for (let i = 1; i < cardNumberReverse.length; i = i + 2) {
       // console.log(cardNumberReverse[i])
-      cardNumberReverse[i]= cardNumberReverse[i] * 2;
+      cardNumberReverse[i] = cardNumberReverse[i] * 2;
       // restar 9 a numeros mayores a 9
-      if (cardNumberReverse[i]>= 10) {
-        cardNumberReverse[i]= cardNumberReverse[i] - 9;
+      if (cardNumberReverse[i] >= 10) {
+        cardNumberReverse[i] = cardNumberReverse[i] - 9;
       }
     }
     // sumar todos los digitos de la tarjeta 
@@ -38,7 +38,5 @@ const validator = {
     maskifyCard = cardNumber.slice(0, -4).replace(/[a-z, 0-9]/g, '#').concat(cardNumber.slice(-4, cardNumber.length));
     return maskifyCard
   }
-
 }
-
 export default validator;

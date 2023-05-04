@@ -3,8 +3,8 @@ import validator from './validator.js';
 const cardNumber = document.getElementById('card-number');
 const btn = document.getElementById('btn');
 const result = document.getElementById('result');
-//const cardType = document.getElementById('card-type');
-//const boxtwo = document.getElementById('two');
+const cardType = document.getElementById('card-type');
+const boxtwo = document.getElementById('two');
 const boxthree = document.getElementById('three');
 
 //Funciones que interactuan con el DOM
@@ -25,31 +25,30 @@ function Valid() {
       enteros.push(numero)
     }
   }
-
-  
   const resultadoFinal = validator.isValid(enteros);
   const maskifyFinal = validator.maskify(cardNumber.value);
   const card = document.getElementById('card');
-  
-  if (resultadoFinal  === true) {
+
+  if (resultadoFinal === true) {
     // console.log(('debería caer con true'));
     card.innerHTML = ('Su tarjeta de crédito número ' + (maskifyFinal) + ' es valida')
   } else {
     card.innerHTML = ('Su tarjeta de credito número ' + (maskifyFinal) + ' es invalida')
   }
 
-  /*if (enteros[0] === 4) {
+  if (enteros[0] === 4) {
     cardType.innerHTML = 'Visa';
   } else if (enteros[0] === 5) {
     cardType.innerHTML = 'MasterCard';
   } else {
     cardType.innerHTML = 'Desconocida';
-  }*/
+  }
 
   //console.log(validator.maskify(cardNumber.value));
 
-  // despliegue de boxthree
-  boxthree.style.display = 'block'
+  // Ocultar caja dos y mostrar caja tres
+  boxtwo.style.display = 'none';
+  boxthree.style.display = 'block';
 }
 
 //eventos del DOM
