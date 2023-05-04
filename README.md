@@ -22,4 +22,3 @@ Al ingresar un número de tarjeta con el formato correcto, se desplegará una nu
 
 5. Diseño de la interfaz
 Optamos por un diseño sencillo que fuera claro de entender, pero a la vez llamativos con colores vibrantes que captan la atención de las usuarias.
-![image](https://user-images.githubusercontent.com/124455712/222547004-f5d9d263-ba08-4e7f-b16e-0fa7b46ede33.png)
